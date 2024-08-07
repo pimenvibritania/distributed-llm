@@ -1,0 +1,43 @@
+{
+  "name": "node-js-typescript-mysql-rest-api",
+  "version": "1.0.0",
+  "description": "Rest API using Node.js, TypeScript, Express, Mysql",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "migrate:up": "db-migrate --env dev up",
+    "migrate:reset": "db-migrate --env dev reset",
+    "migrate:down": "db-migrate --env dev down",
+    "dev": "node ./build/server.js",
+    "start": "set DEBUG=express:* && tsc && npm run dev"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "express",
+    "mysql",
+    "mysql2",
+    "restapi",
+    "rest",
+    "api",
+    "crud"
+  ],
+  "author": "bezkoder",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "cors": "^2.8.5",
+    "db-migrate": "^0.11.14",
+    "db-migrate-mysql": "^3.0.0",
+    "express": "^4.18.2",
+    "mysql2": "^3.4.3"
+  }
+}
